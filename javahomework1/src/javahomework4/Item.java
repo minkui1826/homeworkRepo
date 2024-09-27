@@ -8,6 +8,7 @@ public class Item {
 	String code;
 	String name;
 	int price;
+	int sold;
 	
 	Item(int num, String code) {
 		this.num = num;
@@ -30,5 +31,10 @@ public class Item {
 		if(name.contains(kwd)) return true;
 		return false;
 	}
-
+	
+	public static void countSold(User user) {
+		for (Item item : user.basket) {
+				item.sold++;
+		}
+	}
 }

@@ -48,4 +48,11 @@ public class User {
 		if(name.equals(kwd)) return true;
 		return false;
 	}
+	
+	public boolean haveItem(int num) {
+		for(Item item : basket) {
+			if(item.num == num) return true;
+		}
+		return false;
+	}
 }
